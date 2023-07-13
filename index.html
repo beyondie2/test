@@ -6,7 +6,7 @@
     <title>MAKE LIST</title>
     <style>
       * {
-        font-size: x-large;
+        font-size: xx-large;
       }
 
       .completed {
@@ -18,14 +18,14 @@
   <body>
     <h1>To do List</h1>
     <input type="text" id="listInput" />
-    <button id="addButton">추가</button>
+    <button id="btnAdd">another one</button>
     <ul id="taskList"></ul>
     <script>
       const listInput = document.getElementById("listInput");
-      const addButton = document.getElementById("addButton");
+      const btnAdd = document.getElementById("btnAdd");
       const taskList = document.getElementById("taskList");
 
-      addButton.addEventListener("click", addTask);
+      btnAdd.addEventListener("click", addTask);
 
       function addTask() {
         const taskText = listInput.value.trim();
