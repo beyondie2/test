@@ -17,25 +17,25 @@
   </head>
   <body>
     <h1>To do List</h1>
-    <input type="text" id="taskInput" />
+    <input type="text" id="listInput" />
     <button id="addButton">추가</button>
     <ul id="taskList"></ul>
     <script>
-      const taskInput = document.getElementById("taskInput");
+      const listInput = document.getElementById("listInput");
       const addButton = document.getElementById("addButton");
       const taskList = document.getElementById("taskList");
 
       addButton.addEventListener("click", addTask);
 
       function addTask() {
-        const taskText = taskInput.value.trim();
+        const taskText = listInput.value.trim();
 
         const taskItem = document.createElement("li");
         taskItem.textContent = taskText;
 
         taskList.appendChild(taskItem);
 
-        taskInput.value = "";
+        listInput.value = "";
 
         taskItem.addEventListener("click", completeTask);
       }
